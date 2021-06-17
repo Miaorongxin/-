@@ -14,7 +14,7 @@ with open('ORI.txt') as f:
 # new = cct_seq.replace('A','a')
 # print(new)
 
-# 生成随机数列表
+# 需要随机突变，可生成一个随机数列表
 def rl():
     # print(random_list)
     # print(len(random_list))
@@ -25,8 +25,8 @@ def rl():
     all_list = []
     for i in range(1,len(cct_seq)-1):# 不包括起始和终止密码子
         for k in list_aa:
-            new = cct_seq.replace(cct_seq[i], k)
-            all_list.append('>CCT-'+ cct_seq[i]+str(i+1)+ str(k)) # 注释信息
+            new = cct_seq.replace(cct_seq[i], k) # 用20个氨基酸进行替换
+            all_list.append('>ORI-'+ cct_seq[i]+str(i+1)+ str(k)) # 注释信息
             all_list.append(new)
     # print(all_list)
     # print(len(all_list))
